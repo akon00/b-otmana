@@ -1,0 +1,17 @@
+{
+ "website": {
+  "port": "6969",
+  "callback": "https://Bot-Maker-Bot-Manager.betatestersxd.repl.co/callback",
+  "domain": "https://Bot-Maker-Bot-Manager.betatestersxd.repl.co"
+ },
+
+ "client": {
+  "client_id": "976117935523389460",
+  "client_secret": "LI65soDH95haevzWSPrvIMeNLsZyDVxd"
+ },
+ "server": {
+  "id": "836860001221738527",
+  "botcretorrole": "836860001305886739",
+  "ticketcatagory": "894783769356156978"
+ }
+}

@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg justify-content-center navbar-dark">
+ <a class="navbar-brand" href="/" style="position: relative;z-index: 1;text-decoration: none;color:white;">
+<link href="https://pro.fontawesome.com/releases/v5.13.1/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css">
+
+   &nbsp;&nbsp;
+   
+   <a title="azury" class="navbar-brand logoholder"><img id="logoimg" style="height:55px; width:55px;" src="https://cdn.discordapp.com/attachments/931650810885062686/951646669961822238/output-onlinepngtools_1.png?width=644&height=644" alt="azury"/></a>
+  &nbsp;&nbsp;
+   <div class="sidebar-brand-text mx-3" style="text-shadow: 6px 6px 4px grey;">Azury Manager</b></div>
+   &nbsp;&nbsp;&nbsp;&nbsp;
+   <li class="nav-item">
+                <a href="/"><b style="color:white!important"><i class="fad fa-home mr-1"></i> Home</b></a>
+            </li>
+            <li class="nav-item">
+                <a href="createbot"><b style="color:#56f799!important"><i class="fad fa-robot mr-1"></i> Host Bot</b></a>
+            </li>
+            
+            <li class="nav-item">
+                <a href="team"><b style="color:#be3dfa!important"><i class="fad fa-users mr-1"></i> View Team</a>
+            </li>
+                  <% if(!user){ %>
+                  <li class="nav-item">
+                <a href="login"><b style="color:#56f799!important"><i class="fad fa-sign-in mr-1"></i> Login</b></a>
+            </li>
+                  <% } else{ %>  
+                  <li class="nav-item">
+                <a href="logout"><b style="color:#f75656!important"><i class="fad fa-sign-out mr-1"></i> Logout</b></a>
+            </li>
+                  <% } %>
+</nav>

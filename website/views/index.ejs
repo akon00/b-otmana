@@ -1,0 +1,112 @@
+<%- include("./include/head", { title: ""}) %>
+<body>
+  <%- include("./include/nav") %>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/milrato-sweetalert.css">
+    <link href="https://pro.fontawesome.com/releases/v5.13.1/css/all.css" rel="stylesheet">
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<style>
+.bg-indigo-600 {
+    --tw-bg-opacity: 1;
+    background-image: linear-gradient(-45deg, #ee7752, rgba(79,70,229, 1), #23a6d5, #23d5ab);
+  -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ font-family: "Poppins";
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+</style>
+    
+      <section style="margin-top: -5%;">
+        <div class="d-flex justify-content-center head">
+            <h1 style="font-weight: 900;">
+                <img src="https://cdn.discordapp.com/attachments/931650810885062686/951646669961822238/output-onlinepngtools_1.png?size=4096?width=644&height=644"class="fucking-avatar"/>
+                </span><b></b><span class="bg-indigo-600"><b style="color: !bold; font-size: 30px;"> Azury Manager </span><b/></span>
+                </div>
+        <div class="d-flex justify-content-center subtext">
+            <p style="font-style: italic;font-size: 30px;">Azury Bot Maker, best bots of 2022!
+            <br>
+            <b>Free For Everyone</b>
+            <br>
+                     <svg version="1.1" id="wifi" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100px" height="50px" viewBox="0 0 20 20">
+
+	<path id="wifi3" fill="#FFFFFF" fill-opacity="0.5" d="M9.9,5C6.8,5,4,6.4,2.2,8.7l1.1,1.1c1.6-2,4-3.2,6.7-3.2c2.7,0,5.1,1.3,6.7,3.2l1.1-1.1
+		C15.8,6.4,13,5,9.9,5z">
+		<animate id="four" attributeName="fill-opacity" dur="500ms" values="0.5;1;0.5" calcMode="linear" begin="three.end+0.05s"></animate>
+	</path>
+	<path id="wifi2" fill="#FFFFFF" fill-opacity="0.5" d="M9.9,8c-2.3,0-4.3,1.1-5.6,2.8l1.1,1.1c1-1.4,2.6-2.4,4.5-2.4c1.9,0,3.5,0.9,4.5,2.4l1.1-1.1
+		C14.2,9.1,12.2,8,9.9,8z">
+		<animate id="three" attributeName="fill-opacity" dur="500ms" values="0.5;1;0.5" calcMode="linear" begin="two.end+0.05s"></animate>
+	</path>
+	<path id="wifi1" fill="#FFFFFF" fill-opacity="0.5" d="M9.9,11c-1.5,0-2.7,0.8-3.4,2l1.1,1.1c0.4-0.9,1.3-1.6,2.3-1.6s2,0.7,2.3,1.6l1.1-1.1
+		C12.6,11.8,11.4,11,9.9,11z">
+		<animate id="two" attributeName="fill-opacity" dur="500ms" values="0.5;1;0.5" calcMode="linear" begin="one.end+0.05s"></animate>
+	</path>
+	<circle id="dot" fill="#FFFFFF" fill-opacity="0.5" cx="9.9" cy="15.3" r="1">
+		<animate id="one" attributeName="fill-opacity" dur="500ms" values="0.5;1;0.5" calcMode="linear" begin="0s;four.end+0.05s"></animate>
+	</circle></svg><b><b style="color: white!bold; font-size: 30px;">Current Ping:</b> <span id="ping"><b style="color: white!bold; font-size: 30px;"><%= bot.ws.ping %></span> |  
+            <span id="creation"><b style="color: green!important; font-size: 30px;">Ready to Host!</span>
+              
+              </p>
+          
+        </div>
+        </div>
+                  
+
+
+        
+        </section>
+      
+                  
+      <!-- FOOTER-->
+      <section>
+        <div class="card-footer" style="margin-top: -7%;text-align: center;color: #5663f7;">
+          <hr style="width: 75%;background-color: #FFFFFF!important;color: #FFFFFF!important;border: 5px solid #FFFFFF!important;border-radius:25px;margin-left: 12%;">
+          <h4><span style="font-size: 40px;">Azury Manager</span>
+          </h4>
+          <h5 style="text-align: center;">
+            <a href="https://azury.live" target="_blank" style="font-size: 12px; color: #888a9b!important;text-decoration: none;">&copy; Copyright Azury.live | All rights served | Ping: <%= bot.ws.ping %></a><br><br>
+          </h5>
+        </div>
+      </section>
+      <script>
+          const urlParams = new URLSearchParams(window.location.search);
+          if (urlParams.has('success') && urlParams.get('success')) {
+              Swal.fire({
+                  icon: 'success',
+                  title: 'Success!',
+                  showCloseButton: true,
+                  text: urlParams.get('message'),
+                  footer: 'Copyright 2021 &copy Azury Hangout - All right Reserved.'
+              }).then((result) => {
+                  window.location.href = urlParams.get("redirect")? urlParams.get("redirect") : "/";
+              })
+          }
+          if (urlParams.has('error') && urlParams.get('error')) {
+              Swal.fire({
+                  icon: 'error',
+                  title: 'An Error occurred!',
+                  text: urlParams.get('message'),
+                  showCloseButton: true,
+                  footer: 'Copyright 2021 &copy Azury Hangout - All Right Reserved.'
+              }).then((result) => {
+                  window.location.href = urlParams.get("redirect")? urlParams.get("redirect") : "/";
+              })
+          }
+      </script>
+      <!--JS-->
+      <script src="js/js-bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+</body>
+</html>

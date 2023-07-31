@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <%- include("./include/head", { title: "Team"}) %>
+  <%- include("./include/nav") %>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ea44828f28.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/team.css">
+</head>
+<body>
+<br><br><br><br><br>
+
+
+<div class="grid">
+<% team.map((t) => {%>
+<div class="card">
+<div class="card-info">
+<div class="whatheis"><%= t.whatheis %></div>
+<img src="img/team/<%= t.avatar %>"/>
+</div>
+<div class="card-body">
+<h3><%= t.name %></h3>
+<p><%= t.description %></p>
+</div>
+</div>
+<% }) %>
+</div>
+
+</body>
+</html>
